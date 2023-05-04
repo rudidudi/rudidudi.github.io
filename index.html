@@ -36,7 +36,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const response = await fetch(URL, {mode: 'cors'});
   const myJson = await response.json(); //extract JSON from the http response
   console.log(response);
-  document.getElementById('resposeArea').value = response;
+  document.getElementById('resposeArea').value = response.json;
   }
   
   
