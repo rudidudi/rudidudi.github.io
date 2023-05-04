@@ -20,11 +20,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   
   console.table(dataLayer);
-  debugger;
-  console.log(dataLayer);
-  console.log(dataLayer[1].h.key1);
-
-
+      debugger;
+      console.log(dataLayer);
+    
+      function myStopFunction() {
+            console.log(dataLayer);
+            debugger
+            console.log(dataLayer[1].h.key1);
+        }
+      const myTimeout = setTimeout(myStopFunction, 5000);
 
 </script>
 
