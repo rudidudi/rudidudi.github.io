@@ -36,12 +36,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const response = await fetch(URL, {mode: 'cors'});
   const myJson = await response.json(); //extract JSON from the http response
   console.log(response);
+  document.getElementById('resposeArea').value = response;
   }
+  
   
 
 </script>
   
 <input id="API" type="button" value="SendGTM" onclick="callAPI()" />
+<textarea id="resposeArea" name="name">This text gets removed</textarea>
+
 
 </body>
 </html>
