@@ -31,7 +31,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const myTimeout = setTimeout(myStopFunction, 2000);
   
   const userAction = async () => {
-  const response = await fetch('http://example.com/movies.json');
+  const response = await fetch('https://httpbin.org/get?key=key&value=value');
   const myJson = await response.json(); //extract JSON from the http response
   console.log(response);
   console.log(myJson);
