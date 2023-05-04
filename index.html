@@ -30,6 +30,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   const myTimeout = setTimeout(myStopFunction, 2000);
   
+  const userAction = async () => {
+  const response = await fetch('http://example.com/movies.json');
+  const myJson = await response.json(); //extract JSON from the http response
+  console.log(response);
+  console.log(myJson);
+  }
+  
   function sendAPI(){
     console.log(key1);
     console.log(key2);
@@ -43,7 +50,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </script>
   
-<input id="clickMe" type="button" value="clickme" onclick="sendAPI();" />
+<input id="clickMe" type="button" value="clickme" onclick="sendAPI()" />
+<input id="clickMe" type="button" value="clickme2" onclick="userAction()" />
 
 </body>
 </html>
