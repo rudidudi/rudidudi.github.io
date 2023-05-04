@@ -25,8 +25,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var key2
     
   function myStopFunction() {
-    key1 = console.log(dataLayer[1].h.key1);
-    key2 = console.log(dataLayer[1].h.key1);
+    key1 = dataLayer[1].h.key1;
+    key2 = dataLayer[1].h.key2;
   }
   const myTimeout = setTimeout(myStopFunction, 2000);
   
@@ -36,6 +36,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function sendAPI(){
       console.log(key1);
       console.log(key2);
+    
   }
 
 </script>
