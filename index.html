@@ -33,10 +33,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const myTimeout = setTimeout(myStopFunction, 2000);
   
   const callAPI = async () => {
-  const response = await fetch(URL, {mode: 'no-cors'});
+  const response = await fetch(URL, {mode: 'cors'});
   const myJson = await response.json(); //extract JSON from the http response
   console.log(response);
-  document.getElementById('resposeArea').value = response.json.args;
   }
   
   
@@ -44,8 +43,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
   
 <input id="API" type="button" value="SendGTM" onclick="callAPI()" />
-<br>
-<textarea height="200px" height="200px" id="resposeArea" name="name" readonly>This text gets removed</textarea>
 
 
 </body>
