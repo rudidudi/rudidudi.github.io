@@ -23,35 +23,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   console.log(dataLayer);
   var key1
   var key2
+  var URL
     
   function myStopFunction() {
     key1 = dataLayer[1].h.key1;
     key2 = dataLayer[1].h.key2;
+    URL = "https://httpbin.org/get?key1="+key1+"&key2="+key2
   }
   const myTimeout = setTimeout(myStopFunction, 2000);
   
-  const userAction = async () => {
-  const response = await fetch('https://httpbin.org/get?key=key&value=value');
+  var URL = "https://httpbin.org/get?key1"+key1+
+  
+  const callAPI = async () => {
+  const response = await fetch(URL);
   const myJson = await response.json(); //extract JSON from the http response
   console.log(response);
-  console.log(myJson);
   }
   
-  function sendAPI(){
-    console.log(key1);
-    console.log(key2);
-    const userAction = async () => {
-    const response = await fetch('https://httpbin.org/get?key=key&value=value');
-    const myJson = await response.json(); 
-    console.log(response);
-    console.log(myJson);
-    }
-  }
 
 </script>
   
-<input id="clickMe" type="button" value="clickme" onclick="sendAPI()" />
-<input id="clickMe" type="button" value="clickme2" onclick="userAction()" />
+<input id="API" type="button" value="clickme2" onclick="callAPI()" />
 
 </body>
 </html>
