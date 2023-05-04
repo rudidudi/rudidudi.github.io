@@ -23,7 +23,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var key1
   var key2
   var URL
-    
+  
+  //Wait for GTM to populate objects
   function myStopFunction() {
     key1 = dataLayer[1].h.key1;
     key2 = dataLayer[1].h.key2;
@@ -31,10 +32,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   const myTimeout = setTimeout(myStopFunction, 2000);
   
+  //send GET request to httpbin
   const callAPI = async () => {
-  const response = await fetch(URL, {mode: 'cors'});
-  const myJson = await response.json(); //extract JSON from the http response
-  console.log(response);
+    const response = await fetch(URL, {mode: 'cors'});
+    const myJson = await response.json(); //extract JSON from the http response
+    console.log(response);
   }
 </script>
   
