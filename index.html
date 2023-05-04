@@ -32,8 +32,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   const myTimeout = setTimeout(myStopFunction, 2000);
   
-  var URL = "https://httpbin.org/get?key1"+key1+
-  
   const callAPI = async () => {
   const response = await fetch(URL);
   const myJson = await response.json(); //extract JSON from the http response
